@@ -76,10 +76,9 @@ public class AccountResource implements AccountController {
     }
 
     @Override
-    public ResponseEntity<AccountOut> read(String idUser, String roleUser) {
+    public ResponseEntity<AccountOut> read(String idUser) {
         final AccountOut account = AccountOut.builder()
             .id(idUser)
-            .name(roleUser)
             .build();
         return ResponseEntity.ok(account);
     }
