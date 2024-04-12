@@ -1,12 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Jenkins Account') {
-            steps {
-                echo 'Account Service'
-            }
-        }
-        stage('Build Interface') {
+        stage('Build Account') {
             steps {
                 build job: 'store.account', wait: true
             }
@@ -33,6 +28,5 @@ pipeline {
                 }
             }
         }
-
     }
 }
