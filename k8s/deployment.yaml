@@ -15,6 +15,7 @@ spec:
       containers:
         - name: account
           image: humbertosandmann/account:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
