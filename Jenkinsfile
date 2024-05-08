@@ -14,7 +14,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    account = docker.build("humbertosandmann/account:${env.BUILD_ID}", "-f Dockerfile .")
+                    image = docker.build("humbertosandmann/account:${env.BUILD_ID}", "-f Dockerfile .")
                 }
             }
         }
@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credential') {
-                        account.push("${env.BUILD_ID}")
-                        account.push("latest")
+                        image.push("${env.BUILD_ID}")
+                        image.push("latest")
                     }
                 }
             }
