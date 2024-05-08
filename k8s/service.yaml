@@ -5,7 +5,7 @@ metadata:
     labels:
         name: account
 spec:
-    type: NodePort
+    type: ClusterIP
     ports:
         - port: 8080
           targetPort: 8080
