@@ -20,12 +20,6 @@ spec:
             - containerPort: 8080
           env:
 
-            - name: DISCOVERY_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: discovery-configmap
-                  key: DISCOVERY_HOST
-
             - name: POSTGRES_HOST
               valueFrom:
                 configMapKeyRef:
