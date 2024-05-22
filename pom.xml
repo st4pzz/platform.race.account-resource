@@ -53,10 +53,10 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- permite o registro em um servico de discovery -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-kubernetes-client-all -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-kubernetes-client-all</artifactId>
 		</dependency>
 
 		<!-- habilitar para fazer uso de outros microsservicos -->
