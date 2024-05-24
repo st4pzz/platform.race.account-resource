@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product
+  name: account
 spec:
   selector:
     matchLabels:
-      app: product
+      app: account
   replicas: 1
   template:
     metadata:
       labels:
-        app: product
+        app: account
     spec:
       containers:
-        - name: product
-          image: luccahiratsuca/product:latest
+        - name: account
+          image: weeeveralex/account:latest
           ports:
             - containerPort: 8080
           env:
@@ -43,10 +43,6 @@ spec:
                 secretKeyRef:
                   name: postgres-credentials
                   key: POSTGRES_PASSWORD
-            - name: REDIS_HOST
-              value: "redis-service"
-            - name: REDIS_PORT
-              value: "6379"
             - name: SPRING_PROFILES_ACTIVE
               value: "prod"
             - name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE
