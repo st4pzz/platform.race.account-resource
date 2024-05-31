@@ -18,27 +18,27 @@ A arquitetura do projeto utiliza uma abordagem de microserviços, onde cada comp
 ## Estrutura do Projeto
 
 ```
-├── account-resource/
-    ├── k8s/
-    ├── src/
-    │   ├── main/
-    │   │   ├── java/
-    │   │       └── insper/
-    │   │           └── store/
-    │   │               └── account/
-    │   │                   ├── Account/
-    │   │                   ├── AccountApplication/
-    │   │                   ├── AccountModel/
-    │   │                   ├── AccountParser/
-    │   │                   ├── AccountRepository/
-    │   │                   ├── AccountResource/
-    │   │                   └── AccountService/
-    │   └── resources/
-    ├── .gitignore
-    ├── Dockerfile
-    ├── Jenkinsfile
-    ├── README.md
-    └── pom.xml
+account-resource/
+├── k8s/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │       └── insper/
+│   │           └── store/
+│   │               └── account/
+│   │                   ├── Account/
+│   │                   ├── AccountApplication/
+│   │                   ├── AccountModel/
+│   │                   ├── AccountParser/
+│   │                   ├── AccountRepository/
+│   │                   ├── AccountResource/
+│   │                   └── AccountService/
+│   └── resources/
+├── .gitignore
+├── Dockerfile
+├── Jenkinsfile
+├── README.md
+└── pom.xml
 ```
 
 ## Configuração e Execução
